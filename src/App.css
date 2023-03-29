@@ -17,3 +17,16 @@ table th, table td{
   padding-left: 20px;
   padding-right: 20px;
 }
+input {
+  padding: 10px;
+  margin-bottom: 40px;
+  margin-right: 10px;
+}
+button{
+  padding: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgb(62, 59, 255);
+  border-radius: 10px;
+  
+}
