@@ -3,19 +3,16 @@ import Logo from '../assets/pipcatchers_logo.svg'
 
 function banner() {
   return (
-    <nav class="bg-white border-gray-200 dark:bg-gray-900 shadow-sm">
+    <div class="bg-white border-gray-200 dark:bg-gray-900 shadow-sm">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <div>
     <a href="#" class="flex items-center">
-      <div>
+      <div className='flex text-black font-bold'>
         <img src={Logo} class="h-8 mr-3" alt="Flowbite Logo" height={"250px"} />
-<<<<<<< HEAD
         <p>Pips Catchers</p>
         </div>
-=======
-     <p className="text-slate-700 text-extrabold""> Pips Catchers</p>
->>>>>>> 985bc34a9e111ac31cc654349cafecca180c72d9
     </a>
+  </div>
 <div>
     <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
       <span class="sr-only">Open main menu</span>
@@ -42,7 +39,8 @@ function banner() {
       </ul>
     </div>
   </div>
-</nav>
+  </div>
+</div>
   )
 }
 
