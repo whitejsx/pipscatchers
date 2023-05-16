@@ -61,12 +61,11 @@ function App() {
         className="h-[86vh] flex justify-around align-center items-center"
       >
         <div>
-        <h1 className="text-bold font-extrabold text-[2.5rem] mb-1">The Programme</h1>
-        <p classname="mt-2">
-          Ready to take your forex trading skills to the next level?<br></br> Our
-          professional mentorship program provides guidance, support, and proven<br></br>
-          strategies to help you achieve your trading goals...{" "}
-        </p>
+        <h1 className="text-bold font-extrabold text-[3.5rem] mb-1">What we offer</h1>
+        <p classname="mt-2 text-[25px] bg-slate-700">
+        We at pips catchers,offer mentoring services only as we are not just a go to place for trading tips,<br /> Yes we tip you daily via our content but what we offer are a lifetime mentoring service,
+        <p>so you can one day become a professional trader like ourselves here with the team.{" "}</p>
+</p>
         </div>
         <div>
           <img src={PorImg} width="420px" />
@@ -102,13 +101,14 @@ function App() {
     <div class="grid max-w-screen-xl px-5 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 ">
         <div class="mr-auto place-self-center lg:col-span-7">
             <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">Pro T<span className="text-red-400">i</span>p and <br></br>Signal for You</h1>
-            <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack.</p>
+            <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-4lg lg:text-2xl dark:text-gray-400 mt-4">We are a team of professional traders and investment managers with close to 2 decades of experience in the financial market.
+ .</p>
             <a href="#" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
                 Get started
                 <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </a>
             <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-                Speak to Sales
+                Explore 
             </a> 
         </div>
         <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
@@ -140,7 +140,7 @@ function App() {
                   <p class="my-4">If you care for your time, I hands down would go with this."</p>
               </blockquote>
               <figcaption class="flex justify-center items-center space-x-3">
-                  <img class="w-9 h-9 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture" />
+                  <img class="w-9 h-9 rounded-full" src="" alt="profile picture" />
                   <div class="space-y-0.5 font-medium dark:text-white text-left">
                       <div>Bonnie Green</div>
                       <div class="text-sm font-light text-gray-500 dark:text-gray-400">Developer at Open AI</div>
@@ -154,7 +154,7 @@ function App() {
                   <p class="my-4">Designing with Figma components that can be easily translated to the utility classes of Tailwind CSS is a huge timesaver!"</p>
               </blockquote>
               <figcaption class="flex justify-center items-center space-x-3">
-                  <img class="w-9 h-9 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png" alt="profile picture" />
+                  <img class="w-9 h-9 rounded-full" src="" alt="profile picture" />
                   <div class="space-y-0.5 font-medium dark:text-white text-left">
                       <div>Roberta Casas</div>
                       <div class="text-sm font-light text-gray-500 dark:text-gray-400">Lead designer at Dropbox</div>
@@ -169,7 +169,7 @@ function App() {
                   <p class="my-4">Aesthetically, the well designed components are beautiful and will undoubtedly level up your next application."</p>
               </blockquote>
               <figcaption class="flex justify-center items-center space-x-3">
-                  <img class="w-9 h-9 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="profile picture" />
+                  <img class="w-9 h-9 rounded-full" src="" alt="profile picture" />
                   <div class="space-y-0.5 font-medium dark:text-white text-left">
                       <div>Jese Leos</div>
                       <div class="text-sm font-light text-gray-500 dark:text-gray-400">Software Engineer at Facebook</div>
@@ -183,7 +183,7 @@ function App() {
                   <p class="my-4">You have many examples that can be used to create a fast prototype for your team."</p>
               </blockquote>
               <figcaption class="flex justify-center items-center space-x-3">
-                  <img class="w-9 h-9 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png" alt="profile picture" />
+                  <img class="w-9 h-9 rounded-full" src="" alt="profile picture" />
                   <div class="space-y-0.5 font-medium dark:text-white text-left">
                       <div>Joseph McFall</div>
                       <div class="text-sm font-light text-gray-500 dark:text-gray-400">CTO at Google</div>
@@ -294,7 +294,7 @@ function App() {
         </div>
         <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 " />
         <div class="sm:flex sm:items-center sm:justify-between ">
-            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="https://flowbite.com" class="hover:underline">PIPsCatcher</a>. All Rights Reserved.
+            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="" class="hover:underline">PIPsCatcher</a>. All Rights Reserved.
             </span>
             <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0 text-white">
                 <a href="#" class="text-gray-50 hover:text-gray-900 dark:hover:text-white">
