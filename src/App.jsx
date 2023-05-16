@@ -4,34 +4,11 @@ import Hero from "./assets/pp.png";
 import PorImg from "./assets/woman.png";
 import Expert from "./assets/expert.png";
 import Tips from "./assets/protips.png";
-import Logo from "./assets/iu.png"
+import Logo from "./assets/iu.PNG"
 
 function App() {
 
-    document.addEventListener('DOMContentLoaded', function () {
-        new Swiper('.swiper-container', {
-          loop: true,
-          slidesPerView: 1,
-          spaceBetween: 32,
-          autoplay: {
-            delay: 8000,
-          },
-          breakpoints: {
-            640: {
-              centeredSlides: true,
-              slidesPerView: 1.25,
-            },
-            1024: {
-              centeredSlides: false,
-              slidesPerView: 1.5,
-            },
-          },
-          navigation: {
-            nextEl: '.next-button',
-            prevEl: '.prev-button',
-          },
-        })
-      })
+   
 
   return (
     <div className="bg-slate-50 ">
