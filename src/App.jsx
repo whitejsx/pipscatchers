@@ -4,7 +4,9 @@ import Hero from "./assets/pp.png";
 import PorImg from "./assets/woman.png";
 import Expert from "./assets/expert.png";
 import Tips from "./assets/protips.png";
-import Logo from "./assets/pipcatchers_logo.svg"
+// import Logo from "./assets/pipcatchers_logo.svg"
+import Slide from 'react-reveal/Slide';
+import Fade from 'react-reveal/Fade';
 
 function App() {
 
@@ -19,10 +21,10 @@ function App() {
         id="home"
         className=" h-[100vh] flex flex-row justify-between   overflow-auto bg-slate-50 pl-20 pr-20 overflow-hidden "
       >
-        <div className="flex flex-col justify-center items-center m-auto">
+        <div class="headline flex flex-col justify-center items-center m-auto">
           <div className="items-center align-center">
             <h1 className="text-size-500 font-extrabold text-[5rem] text-black">
-              <span className="text-black">FOREX</span> Today
+              <span className="text-black ">FOREX</span> Today
             </h1>
             <p className="mt-3 text-[25px] align-center text-center text-slate-400">
               Master Forex Trading with Expert Guidance <br></br>
@@ -34,7 +36,9 @@ function App() {
           </button>
         </div>
         <div>
+        <Slide left>
           <img src={Hero} className="mt-20" height="150px" width="500px" />
+          </Slide>
         </div>
       </div>
       {/* new latter */}
@@ -48,21 +52,25 @@ function App() {
           <div className="flex justify-center items-center align-center mt-20 p-2">
             <img src={Expert} width="450px" height={"200px"} />
           </div>
+      
           <div className="flex  flex-col justify-center items-center text-white p-2">
-            <h1 className="text-slate-200 text-center text-[3rem] text-extrabold mb-4">
+          <Slide right>
+            <h1 className="text-slate-200 text-center text-[3rem] font-extrabold mb-4">
               Our Risk Management Tools
             </h1>
+            </Slide >
           <p className="text-slate-100 text-xl p-4 text-center leading-loose"> We offer a wide range of trading tips yet only a couple of times a week,our wide exposure to different trading environment gives us the ability to trade with you twice a week in the real live market.we are a wide range of risk analyzers ranging from cost of assets,currency pairs, commodities and even real estate investment.</p>
 
-          
+         
       
           </div>
+         
         </div>
       </div>
       <div id="About" className="h-[86vh] flex justify-around align-center items-center">
         <div className="w-1/2">
-        <h1 className="text-bold font-extrabold text-[3.5rem] mb-4">What we offer</h1>
-        <p classname="mt-2 text-[45px] bg-slate-400 leading-loose p-4">
+        <h1 className="text-bold font-extrabold text-[3.5rem] mb-4 ml-20">What we offer</h1>
+        <p className=" max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-4lg lg:text-2xl dark:text-gray-40">
         At Pips Catchers, our focus is solely on providing mentoring services rather than being a mere source of trading tips. 
         While we do provide daily tips through our content, our primary offering is a comprehensive lifetime mentoring service. 
         <br /><br />Our goal is to guide and support you on your journey to becoming a professional trader, just like our experienced team members.
@@ -72,7 +80,7 @@ function App() {
           <img src={PorImg} width="420px" />
         </div>
       </div>
-      <div class="bg-slate-700 text-white dark:bg-gray-900">
+      <div class="headline bg-slate-700 text-white dark:bg-gray-900">
   <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
       <div class="mx-auto max-w-screen-md sm:text-center">
           <h2 class="mb-4 text-3xl tracking-tight font-extrabold text-gray-300 sm:text-4xl dark:text-white">Sign up for our newsletter</h2>
@@ -97,7 +105,7 @@ function App() {
 </div>
 
       {/* About section */}
-      
+      <Fade bottom>
       <section class="bg-white dark:bg-gray-900 mt-10">
     <div class="grid max-w-screen-xl px-5 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 ">
         <div class="mr-auto place-self-center lg:col-span-7">
@@ -117,6 +125,7 @@ function App() {
         </div>                
     </div>
 </section>
+</Fade>
       {/*  */}
       {/* testimonial */}
       <div id="test">
@@ -193,85 +202,9 @@ function App() {
         <div class="swiper-container !overflow-hidden">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <blockquote
-                class="flex h-full flex-col justify-between bg-white p-12"
-              >
-                <div>
-                  <div class="flex gap-0.5 text-green-500">
-                    <svg
-                      class="h-5 w-5"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                      />
-                    </svg>
-
-                    <svg
-                      class="h-5 w-5"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                      />
-                    </svg>
-
-                    <svg
-                      class="h-5 w-5"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                      />
-                    </svg>
-
-                    <svg
-                      class="h-5 w-5"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                      />
-                    </svg>
-
-                    <svg
-                      class="h-5 w-5"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                      />
-                    </svg>
-                  </div>
-
-                  <div class="mt-4">
-                    <p class="text-2xl font-bold text-pink-600 sm:text-3xl">
-                      Stayin' Alive
-                    </p>
-
-                    <p class="mt-4 leading-relaxed text-gray-500">
-                    From the moment I started my mentorship, I realized I had made one of the best decisions of my trading career. 
-                    My mentor, an experienced and successful trader, patiently guided me through the intricacies of the forex market. They took the time to understand my goals, strengths, and weaknesses, tailoring the mentorship program to suit my individual needs.
-                    </p>
-                  </div>
-                </div>
-
-                <footer class="mt-8 text-sm text-gray-500">
-                  &mdash; Michael Scott
-                </footer>
-              </blockquote>
+             
             </div>
-
+            <Slide right>
             <div class="swiper-slide">
               <blockquote
                 class="flex h-full flex-col justify-between bg-white p-12"
@@ -351,86 +284,7 @@ function App() {
                 </footer>
               </blockquote>
             </div>
-
-            <div class="swiper-slide">
-              <blockquote
-                class="flex h-full flex-col justify-between bg-white p-12"
-              >
-                <div>
-                  <div class="flex gap-0.5 text-green-500">
-                    <svg
-                      class="h-5 w-5"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                      />
-                    </svg>
-
-                    <svg
-                      class="h-5 w-5"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                      />
-                    </svg>
-
-                    <svg
-                      class="h-5 w-5"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                      />
-                    </svg>
-
-                    <svg
-                      class="h-5 w-5"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                      />
-                    </svg>
-
-                    <svg
-                      class="h-5 w-5"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                      />
-                    </svg>
-                  </div>
-
-                  <div class="mt-4">
-                    <p class="text-2xl font-bold text-pink-600 sm:text-3xl">
-                      Stayin' Alive
-                    </p>
-
-                    <p class="mt-4 leading-relaxed text-gray-500">
-                    I cannot express enough gratitude for the invaluable experience and knowledge gained through my forex mentorship program.
-                     It has been an absolute game-changer in my journey as a forex trader, and I am thrilled to share my testimonial to encourage others to embark on this transformational journey.
-                    </p>
-                  </div>
-                </div>
-
-                <footer class="mt-8 text-sm text-gray-500">
-                  &mdash; Michael Scott
-                </footer>
-              </blockquote>
-            </div>
+            </Slide>
           </div>
         </div>
       </div>
@@ -530,15 +384,15 @@ function App() {
 
 
       {/* footer */}
-      <footer class="p-4 bg-slate-700 mt-20 sm:p-6 dark:bg-gray-800 text-white">
+      <footer class="p-1 bg-slate-700 mt-20 sm:p-1 dark:bg-gray-800 text-white   ">
     <div class="mx-auto max-w-screen-xl">
         
         
         <div class="sm:flex sm:items-center sm:justify-between ">
-            <div class="text-sm text-gray-500 sm:text-center dark:text-gray-400 flex items-center font-bold">© 2023
-             <img src={Logo} class="mr-3 h-8 p-1" alt="FlowBite Logo" />
-                  <p>Pips Catchers</p>
-             <a href="" class="hover:underline">PIPsCatcher</a>. All Rights Reserved.
+            <div class="text-sm text-gray-500 sm:text-center dark:text-gray-400 flex items-center font-bold">© 2023 
+             {/* <img src={Logo} class="mr-3 h-8 p-1" alt="FlowBite Logo" /> */}
+                  {/* <p>Pips Catchers</p> */}
+             <a href="" class="hover:underline "> <p className="p-1">PIPsCatcher</p></a>. All Rights Reserved.
             </div>
             <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0 text-white">
                 <a href="#" class="text-gray-50 hover:text-gray-900 dark:hover:text-white">
