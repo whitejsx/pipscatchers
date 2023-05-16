@@ -4,7 +4,7 @@ import Hero from "./assets/pp.png";
 import PorImg from "./assets/woman.png";
 import Expert from "./assets/expert.png";
 import Tips from "./assets/protips.png";
-
+import Logo from "./assets/pipcatchers_logo.svg"
 
 function App() {
 
