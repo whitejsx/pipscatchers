@@ -4,8 +4,35 @@ import Hero from "./assets/pp.png";
 import PorImg from "./assets/woman.png";
 import Expert from "./assets/expert.png";
 import Tips from "./assets/protips.png";
+import Logo from "./assets/iu.png"
 
 function App() {
+
+    document.addEventListener('DOMContentLoaded', function () {
+        new Swiper('.swiper-container', {
+          loop: true,
+          slidesPerView: 1,
+          spaceBetween: 32,
+          autoplay: {
+            delay: 8000,
+          },
+          breakpoints: {
+            640: {
+              centeredSlides: true,
+              slidesPerView: 1.25,
+            },
+            1024: {
+              centeredSlides: false,
+              slidesPerView: 1.5,
+            },
+          },
+          navigation: {
+            nextEl: '.next-button',
+            prevEl: '.prev-button',
+          },
+        })
+      })
+
   return (
     <div className="bg-slate-50 ">
       {/* <h1>Home</h1> */}
@@ -17,8 +44,8 @@ function App() {
       >
         <div className="flex flex-col justify-center items-center m-auto">
           <div className="items-center align-center">
-            <h1 className="text-size-500 font-extrabold text-[5rem] text-blue-600">
-              <span className="text-red-400">FOREX</span> Today
+            <h1 className="text-size-500 font-extrabold text-[5rem] text-black">
+              <span className="text-black">FOREX</span> Today
             </h1>
             <p className="mt-3 text-[25px] align-center text-center text-slate-400">
               Master Forex Trading with Expert Guidance <br></br>
@@ -44,28 +71,25 @@ function App() {
           <div className="flex justify-center items-center align-center mt-20 p-2">
             <img src={Expert} width="450px" height={"200px"} />
           </div>
-          <div className="flex  flex-col justify-center items-center text-white">
-            <h1 className="text-slate-200 text-center text-[2rem] text-bold ">
-              Empower Your Forex Trading Journey<br></br>
-              Gain an Edge with Professional<br></br>
-              Forex Mentorship!
+          <div className="flex  flex-col justify-center items-center text-white p-2">
+            <h1 className="text-slate-200 text-center text-[3rem] text-extrabold mb-4">
+              Our Risk Management Tools
             </h1>
-            <button className="bg-[#DAB805] p-2 pl-20 pr-20 mt-20 rounded text-white hover:bg-[#e4c62f] active:bg-[#5e5426] active:ring-2 ring-slate-50">
-              Expert Mentorship
-            </button>
+          <p className="text-slate-100 text-xl p-4 text-center leading-loose"> We offer a wide range of trading tips yet only a couple of times a week,our wide exposure to different trading environment gives us the ability to trade with you twice a week in the real live market.we are a wide range of risk analyzers ranging from cost of assets,currency pairs, commodities and even real estate investment.</p>
+
+          
+      
           </div>
         </div>
       </div>
-      <div
-        id="About"
-        className="h-[86vh] flex justify-around align-center items-center"
-      >
-        <div>
-        <h1 className="text-bold font-extrabold text-[3.5rem] mb-1">What we offer</h1>
-        <p classname="mt-2 text-[25px] bg-slate-700">
-        We at pips catchers,offer mentoring services only as we are not just a go to place for trading tips,<br /> Yes we tip you daily via our content but what we offer are a lifetime mentoring service,
-        <p>so you can one day become a professional trader like ourselves here with the team.{" "}</p>
-</p>
+      <div id="About" className="h-[86vh] flex justify-around align-center items-center">
+        <div className="w-1/2">
+        <h1 className="text-bold font-extrabold text-[3.5rem] mb-4">What we offer</h1>
+        <p classname="mt-2 text-[45px] bg-slate-400 leading-loose p-4">
+        At Pips Catchers, our focus is solely on providing mentoring services rather than being a mere source of trading tips. 
+        While we do provide daily tips through our content, our primary offering is a comprehensive lifetime mentoring service. 
+        <br /><br />Our goal is to guide and support you on your journey to becoming a professional trader, just like our experienced team members.
+        </p>
         </div>
         <div>
           <img src={PorImg} width="420px" />
@@ -96,7 +120,7 @@ function App() {
 </div>
 
       {/* About section */}
-
+      
       <section class="bg-white dark:bg-gray-900 mt-10">
     <div class="grid max-w-screen-xl px-5 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 ">
         <div class="mr-auto place-self-center lg:col-span-7">
@@ -127,75 +151,357 @@ function App() {
 
 
         {/* testimonial */}
-        <div class="bg-white dark:bg-gray-900">
-  <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
-      <div class="mx-auto max-w-screen-sm">
-      </div> 
-      <div class="grid mb-8 lg:mb-12 lg:grid-cols-2">
-          <figure class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 md:p-12 lg:border-r dark:bg-gray-800 dark:border-gray-700">
-              <blockquote class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
-                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Speechless with how easy this was to integrate</h3>
-                  <p class="my-4">"I recently got my hands on Flowbite Pro, and holy crap, I'm speechless with how easy this was to integrate within my application. Most templates are a pain, code is scattered, and near impossible to theme.</p>
-                  <p class="my-4">Flowbite has code in one place and I'm not joking when I say it took me a matter of minutes to copy the code, customise it and integrate within a Laravel + Vue application.</p>
-                  <p class="my-4">If you care for your time, I hands down would go with this."</p>
-              </blockquote>
-              <figcaption class="flex justify-center items-center space-x-3">
-                  <img class="w-9 h-9 rounded-full" src="" alt="profile picture" />
-                  <div class="space-y-0.5 font-medium dark:text-white text-left">
-                      <div>Bonnie Green</div>
-                      <div class="text-sm font-light text-gray-500 dark:text-gray-400">Developer at Open AI</div>
-                  </div>
-              </figcaption>    
-          </figure>
-          <figure class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 md:p-12 dark:bg-gray-800 dark:border-gray-700">
-              <blockquote class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
-                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Solid foundation for any project</h3>
-                  <p class="my-4">"FlowBite provides a robust set of design tokens and components based on the popular Tailwind CSS framework. From the most used UI components like forms and navigation bars to the whole app screens designed both for desktop and mobile, this UI kit provides a solid foundation for any project.</p>
-                  <p class="my-4">Designing with Figma components that can be easily translated to the utility classes of Tailwind CSS is a huge timesaver!"</p>
-              </blockquote>
-              <figcaption class="flex justify-center items-center space-x-3">
-                  <img class="w-9 h-9 rounded-full" src="" alt="profile picture" />
-                  <div class="space-y-0.5 font-medium dark:text-white text-left">
-                      <div>Roberta Casas</div>
-                      <div class="text-sm font-light text-gray-500 dark:text-gray-400">Lead designer at Dropbox</div>
-                  </div>
-              </figcaption>    
-          </figure>
-          <figure class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 lg:border-b-0 md:p-12 lg:border-r dark:bg-gray-800 dark:border-gray-700">
-              <blockquote class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
-                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Mindblowing workflow and variants</h3>
-                  <p class="my-4">"As someone who mainly designs in the browser, I've been a casual user of Figma, but as soon as I saw and started playing with FlowBite my mind was 🤯.</p>
-                  <p class="my-4">Everything is so well structured and simple to use (I've learnt so much about Figma by just using the toolkit).</p>
-                  <p class="my-4">Aesthetically, the well designed components are beautiful and will undoubtedly level up your next application."</p>
-              </blockquote>
-              <figcaption class="flex justify-center items-center space-x-3">
-                  <img class="w-9 h-9 rounded-full" src="" alt="profile picture" />
-                  <div class="space-y-0.5 font-medium dark:text-white text-left">
-                      <div>Jese Leos</div>
-                      <div class="text-sm font-light text-gray-500 dark:text-gray-400">Software Engineer at Facebook</div>
-                  </div>
-              </figcaption>    
-          </figure>
-          <figure class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-gray-200 md:p-12 dark:bg-gray-800 dark:border-gray-700">
-              <blockquote class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
-                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Efficient Collaborating</h3>
-                  <p class="my-4">"This is a very complex and beautiful set of elements. Under the hood it comes with the best things from 2 different worlds: Figma and Tailwind.</p>
-                  <p class="my-4">You have many examples that can be used to create a fast prototype for your team."</p>
-              </blockquote>
-              <figcaption class="flex justify-center items-center space-x-3">
-                  <img class="w-9 h-9 rounded-full" src="" alt="profile picture" />
-                  <div class="space-y-0.5 font-medium dark:text-white text-left">
-                      <div>Joseph McFall</div>
-                      <div class="text-sm font-light text-gray-500 dark:text-gray-400">CTO at Google</div>
-                  </div>
-              </figcaption>    
-          </figure>
+        <section class="bg-gray-100">
+  <div
+    class="mx-auto max-w-[1340px] px-4 py-16 sm:px-6 sm:py-24 lg:me-0 lg:pe-0 lg:ps-8"
+  >
+    <div
+      class="grid grid-cols-1 gap-y-8 lg:grid-cols-3 lg:items-center lg:gap-x-16"
+    >
+      <div class="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
+        <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">
+          Don't just take our word for it...
+          <br class="hidden sm:block lg:hidden" />
+          Read reviews from our customers
+        </h2>
+
+        <p class="mt-4 text-gray-500">
+        Transforming Trading Success: A Testimonial for Forex Mentorship
+        </p>
+
+        <div class="hidden lg:mt-8 lg:flex lg:gap-4">
+          <button
+            class="prev-button rounded-full border border-pink-600 p-3 text-pink-600 hover:bg-pink-600 hover:text-white"
+          >
+            <span class="sr-only">Previous Slide</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="h-5 w-5 rtl:rotate-180"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5L8.25 12l7.5-7.5"
+              />
+            </svg>
+          </button>
+
+          <button
+            class="next-button rounded-full border border-pink-600 p-3 text-pink-600 hover:bg-pink-600 hover:text-white"
+          >
+            <span class="sr-only">Next Slide</span>
+            <svg
+              class="h-5 w-5 rtl:rotate-180"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 5l7 7-7 7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
-      <div class="text-center">
-          <a href="#" class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Show more...</a> 
+
+      <div class="-mx-6 lg:col-span-2 lg:mx-0">
+        <div class="swiper-container !overflow-hidden">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <blockquote
+                class="flex h-full flex-col justify-between bg-white p-12"
+              >
+                <div>
+                  <div class="flex gap-0.5 text-green-500">
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="mt-4">
+                    <p class="text-2xl font-bold text-pink-600 sm:text-3xl">
+                      Stayin' Alive
+                    </p>
+
+                    <p class="mt-4 leading-relaxed text-gray-500">
+                    From the moment I started my mentorship, I realized I had made one of the best decisions of my trading career. 
+                    My mentor, an experienced and successful trader, patiently guided me through the intricacies of the forex market. They took the time to understand my goals, strengths, and weaknesses, tailoring the mentorship program to suit my individual needs.
+                    </p>
+                  </div>
+                </div>
+
+                <footer class="mt-8 text-sm text-gray-500">
+                  &mdash; Michael Scott
+                </footer>
+              </blockquote>
+            </div>
+
+            <div class="swiper-slide">
+              <blockquote
+                class="flex h-full flex-col justify-between bg-white p-12"
+              >
+                <div>
+                  <div class="flex gap-0.5 text-green-500">
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="mt-4">
+                    <p class="text-2xl font-bold text-pink-600 sm:text-3xl">
+                      Stayin' Alive
+                    </p>
+
+                    <p class="mt-4 leading-relaxed text-gray-500">
+                    I cannot express enough gratitude for the invaluable experience and knowledge gained through my forex mentorship program.
+                     It has been an absolute game-changer in my journey as a forex trader, and I am thrilled to share my testimonial to encourage others to embark on this transformational journey.
+                    </p>
+                  </div>
+                </div>
+
+                <footer class="mt-8 text-sm text-gray-500">
+                  &mdash; Michael Scott
+                </footer>
+              </blockquote>
+            </div>
+
+            <div class="swiper-slide">
+              <blockquote
+                class="flex h-full flex-col justify-between bg-white p-12"
+              >
+                <div>
+                  <div class="flex gap-0.5 text-green-500">
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+
+                    <svg
+                      class="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="mt-4">
+                    <p class="text-2xl font-bold text-pink-600 sm:text-3xl">
+                      Stayin' Alive
+                    </p>
+
+                    <p class="mt-4 leading-relaxed text-gray-500">
+                    I cannot express enough gratitude for the invaluable experience and knowledge gained through my forex mentorship program.
+                     It has been an absolute game-changer in my journey as a forex trader, and I am thrilled to share my testimonial to encourage others to embark on this transformational journey.
+                    </p>
+                  </div>
+                </div>
+
+                <footer class="mt-8 text-sm text-gray-500">
+                  &mdash; Michael Scott
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
       </div>
-</div>
-</div> 
+    </div>
+
+    <div class="mt-8 flex justify-center gap-4 lg:hidden">
+      <button
+        aria-label="Previous slide"
+        class="prev-button rounded-full border border-pink-600 p-4 text-pink-600 hover:bg-pink-600 hover:text-white"
+      >
+        <svg
+          class="h-5 w-5 -rotate-180 transform"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9 5l7 7-7 7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
+      </button>
+
+      <button
+        aria-label="Next slide"
+        class="next-button rounded-full border border-pink-600 p-4 text-pink-600 hover:bg-pink-600 hover:text-white"
+      >
+        <svg
+          class="h-5 w-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9 5l7 7-7 7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
         {/* end testimonial */}
       </div>
   
@@ -204,7 +510,7 @@ function App() {
   <div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
       <dl class="grid max-w-screen-md gap-8 mx-auto text-white sm:grid-cols-3 dark:text-white">
           <div class="flex flex-col items-center justify-center">
-              <dt class="mb-2 text-4xl md:text-4xl font-extrabold text-white">73K+</dt>
+              <dt class="mb-2 text-4xl md:text-4xl font-extrabold text-white">13K+</dt>
               <dd class="font-light text-gray-50 dark:text-gray-400 text-xl">Student</dd>
           </div>
           <div class="flex flex-col items-center justify-center">
@@ -212,7 +518,7 @@ function App() {
               <dd class="font-light text-white dark:text-gray-400  text-xl">contributors</dd>
           </div>
           <div class="flex flex-col items-center justify-center">
-              <dt class="mb-2 text-4xl md:text-4xl font-extrabold text-white">4K+</dt>
+              <dt class="mb-2 text-4xl md:text-4xl font-extrabold text-white">2K+</dt>
               <dd class="font-light text-white dark:text-gray-400 text-bold text-xl">Community</dd>
           </div>
       </dl>
@@ -252,8 +558,8 @@ function App() {
         <div class="md:flex md:justify-between">
             <div class="mb-6 md:mb-0">
                 <a href="#" class="flex items-center">
-                    <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-8" alt="FlowBite Logo" />
-                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">PIPsCatchers</span>
+                    <img src={Logo} class="mr-3 h-8" alt="FlowBite Logo" />
+                  
                 </a>
             </div>
             <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 text-white">
@@ -261,7 +567,7 @@ function App() {
                     <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
                     <ul class="text-gray-600 dark:text-gray-400">
                         <li class="mb-4">
-                            <a href="#" class="hover:underline">Flowbite</a>
+                         
                         </li>
                         <li>
                             <a href="#" class="hover:underline"></a>
@@ -276,6 +582,9 @@ function App() {
                         </li>
                         <li>
                             <a href="#" class="hover:underline text-white">Discord</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:underline text-white">Whatsapp</a>
                         </li>
                     </ul>
                 </div>
